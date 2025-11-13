@@ -1,25 +1,24 @@
 # 🌟 Step 1: Install required libraries
 # Run this once in your terminal or notebook
-# !pip install -U llama-index llama-index-llms-groq python-dotenv
+# !pip install llama-index llama-index-llms-groq python-dotenv
 
 # 🌟 Step 2: Import what we need
 import os
-from dotenv import load_dotenv  # To load environment variables from .env file
+from dotenv import load_dotenv
 from llama_index.llms.groq import Groq        # To use Groq’s AI models
 from llama_index.core import PromptTemplate   # To create and fill text templates
 
-# 🌟 Step 3: Load API key securely
-# Make sure you have a .env file with this line inside:
-# GROQ_API_KEY=your_actual_groq_api_key
-load_dotenv()
+# 🌟 Step 3: Load environment variables
+load_dotenv()  # This loads all key-value pairs from your .env file
 
-# Connect to the Groq LLM
+# 🌟 Step 4: Connect to the Groq LLM
+# Fetch API key safely from environment variables
 llm = Groq(
     model="llama-3.1-8b-instant",
-    api_key=os.getenv("GROQ_API_KEY")   # ✅ Secure: reads from environment variable
+    api_key=os.getenv("GROQ_API_KEY")   # 🔒 Loaded securely from .env
 )
 
-# 🌟 Step 4: Define functions to ask questions
+# 🌟 Step 5: Define functions to ask questions
 
 # --- Zero-Shot Prompting ---
 def zero_shot_prompt(asked_question):
@@ -51,13 +50,13 @@ def few_shot_prompt(asked_question):
     Q: {question}
     A:
     """)
-
+    
     final_prompt = template.format(examples=examples, question=asked_question)
     response = llm.complete(final_prompt)
     return response.text
 
 
-# 🌟 Step 5: Try it out!
+# 🌟 Step 6: Try it out!
 asked_question = "Explain what a Large Language Model is in simple terms."
 
 print("🧠 Zero-shot answer:\n", zero_shot_prompt(asked_question))
