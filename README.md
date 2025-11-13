@@ -9,7 +9,7 @@ A simple Python project demonstrating **Zero-Shot** and **Few-Shot Prompting** u
 ### 1️⃣ Install dependencies
 ```bash
 pip install llama-index llama-index-llms-groq python-dotenv
-
+```
 ### 2️⃣ Create a .env file
 
 Add your Groq API key:
@@ -39,8 +39,9 @@ GROQ_API_KEY=your_groq_api_key_here
 
 ## 💡 About
 
+
 🔒 Secure API key handling with .env
 
-🧠 Shows difference between Zero-Shot and Few-Shot prompting
+🧠 Demonstrates Zero-Shot vs Few-Shot prompting
 
 ⚙️ Built with llama-index and Groq Llama 3.1
