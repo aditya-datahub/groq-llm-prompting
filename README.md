@@ -28,13 +28,14 @@ GROQ_API_KEY=your_groq_api_key_here
 ---
 
 ## Example Output
+```
 🧠 Zero-shot answer:
  A Large Language Model (LLM) is a type of AI that understands and generates human-like language.
 
 🎯 Few-shot answer:
  Q: What is a Large Language Model?
  A: It is an AI that learns from text patterns to produce natural responses.
-
+```
  ---
 
 ## 💡 About
