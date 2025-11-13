@@ -1,4 +1,4 @@
-# 🧠 Groq LLM Prompting Demo  
+# 🧠 LLM Prompting with Groq (Llama 3.1)
 
 A simple Python project demonstrating **Zero-Shot** and **Few-Shot Prompting** using the **Groq Llama 3.1 model** via `llama-index`.
 
@@ -9,7 +9,7 @@ A simple Python project demonstrating **Zero-Shot** and **Few-Shot Prompting** u
 ### 1️⃣ Install dependencies
 ```bash
 pip install llama-index llama-index-llms-groq python-dotenv
-```
+
 ### 2️⃣ Create a .env file
 
 Add your Groq API key:
@@ -22,7 +22,7 @@ GROQ_API_KEY=your_groq_api_key_here
 
 ## 🧩 Run the Script
 ```bash
-python main.py
+ groq_llm_prompting.py
 ```
 
 ---
