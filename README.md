@@ -1,4 +1,4 @@
-# 🧠 LLM Prompting with Groq (Llama 3.1)
+# 🧠 LLM Prompting with Groq (Llama 3.1
 
 A simple Python project demonstrating **Zero-Shot** and **Few-Shot Prompting** using the **Groq Llama 3.1 model** via `llama-index`.
 
